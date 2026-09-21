@@ -1,0 +1,9 @@
+.vs/
+**/bin/
+**/obj/
+**/.keys/
+*.db
+*.db-shm
+*.db-wal
+*.user
+*.slnLaunch.user

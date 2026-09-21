@@ -1,0 +1,11 @@
+{
+  "Routes": [
+    { "UpstreamPathTemplate": "/clientes", "UpstreamHttpMethod": [ "GET", "POST" ], "DownstreamPathTemplate": "/api/clientes/", "DownstreamScheme": "http", "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5001 } ], "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" } },
+    { "UpstreamPathTemplate": "/clientes/{id}", "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ], "DownstreamPathTemplate": "/api/clientes/{id}", "DownstreamScheme": "http", "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5001 } ], "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" } },
+    { "UpstreamPathTemplate": "/pedidos", "UpstreamHttpMethod": [ "GET" ], "DownstreamPathTemplate": "/api/pedidos/", "DownstreamScheme": "http", "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5002 } ], "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }, "FileCacheOptions": { "TtlSeconds": 30, "Region": "pedidos" } },
+    { "UpstreamPathTemplate": "/pedidos", "UpstreamHttpMethod": [ "POST" ], "DownstreamPathTemplate": "/api/pedidos/", "DownstreamScheme": "http", "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5002 } ], "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" } },
+    { "UpstreamPathTemplate": "/pedidos/{id}", "UpstreamHttpMethod": [ "GET" ], "DownstreamPathTemplate": "/api/pedidos/{id}", "DownstreamScheme": "http", "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5002 } ], "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }, "FileCacheOptions": { "TtlSeconds": 30, "Region": "pedidos" } },
+    { "UpstreamPathTemplate": "/pedidos/cliente/{clienteId}", "UpstreamHttpMethod": [ "GET" ], "DownstreamPathTemplate": "/api/pedidos/cliente/{clienteId}", "DownstreamScheme": "http", "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5002 } ], "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }, "FileCacheOptions": { "TtlSeconds": 30, "Region": "pedidos" } }
+  ],
+  "GlobalConfiguration": { "BaseUrl": "http://localhost:5000" }
+}
